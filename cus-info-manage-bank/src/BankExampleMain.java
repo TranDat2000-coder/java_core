@@ -85,7 +85,7 @@ public class BankExampleMain {
 
                         if(!accData.isEmpty()){
                             for(Account element : accData){
-                                while (accountNumber.contains(element.getAccountNumber())){
+                                while (accountNumber.contains(element.getAccountNumber()) && accountNumber.length() != 6 || !isNumeric(accountNumber)){
                                     System.out.print("Tài khoản đã tồn tại, yêu cầu nhập lại: ");
                                     accountNumber = scanner.nextLine();
                                 }
