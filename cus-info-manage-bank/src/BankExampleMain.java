@@ -62,7 +62,7 @@ public class BankExampleMain {
                         break;
                     }else{
                         final String[] finalCCCD = {cccd};
-                        while (!lstCustomer.stream().anyMatch(cus -> finalCCCD[0].equals(cus.getCustomerId()))){
+                        while (lstCustomer.stream().noneMatch(cus -> finalCCCD[0].equals(cus.getCustomerId()))){
                             System.out.println("Khách hàng không tồn tại, yêu cầu nhập lại: ");
                             cccd = scanner.nextLine();
                             if ("No".equals(cccd)) break;
@@ -79,9 +79,14 @@ public class BankExampleMain {
                             continue;
                         }
 
-                        String finalCccd = cccd;
-                        List<Customer> cusData = lstCustomer.stream().filter(cus ->(finalCccd.equals(cus.getCustomerId()))).collect(Collectors.toList());
-                        List<Account> accData = cusData.stream().flatMap(s -> s.getAccounts().stream()).collect(Collectors.toList());
+                        String finalCCCCD = cccd;
+                        List<Customer> cusData = lstCustomer.stream()
+                                .filter(cus ->(finalCCCCD.equals(cus.getCustomerId())))
+                                .collect(Collectors.toList());
+
+                        List<Account> accData = cusData.stream()
+                                .flatMap(s -> s.getAccounts().stream())
+                                .collect(Collectors.toList());
 
                         if(!accData.isEmpty()){
                             for(Account element : accData){
