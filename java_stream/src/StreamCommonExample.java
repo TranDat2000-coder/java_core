@@ -17,5 +17,7 @@ public class StreamCommonExample {
 
         List<Integer> lstInt = new ArrayList<>();
         System.out.println("Check Empty: " + lstInt.isEmpty());
+
+
     }
 }
