@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 4. Client code
+ */
 public class FactoryMethodExample {
     public static void main(String[] args) throws IOException {
         GetPlanFactory getPlanFactory = new GetPlanFactory();

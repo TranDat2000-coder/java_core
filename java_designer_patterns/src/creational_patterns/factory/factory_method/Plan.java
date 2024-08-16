@@ -1,5 +1,8 @@
 package creational_patterns.factory.factory_method;
 
+/**
+ * 1. Product interface or Abstract class
+ */
 abstract class Plan {
 
     protected double rate;

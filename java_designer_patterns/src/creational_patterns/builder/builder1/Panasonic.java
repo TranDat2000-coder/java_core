@@ -8,6 +8,8 @@ public class Panasonic extends Company{
 
     @Override
     public int price() {
-        return 34;
+        int a = 10;
+        int b = 0;
+        return a / b;
     }
 }

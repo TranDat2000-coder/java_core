@@ -1,5 +1,8 @@
 package creational_patterns.factory.factory_method;
 
+/**
+ * 3. Factory class
+ */
 public class GetPlanFactory {
 
     public Plan getPlan(String planType){
