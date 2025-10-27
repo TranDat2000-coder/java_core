@@ -1,11 +1,12 @@
+import package2.SamePackageChild;
+import package2.Student;
 
 public class MainExample {
 
     public static void main(String[] args) {
 
-        Employ emp = new Employ();
-        System.out.println(emp.changeName("John"));
+        Student std = new Student();
+        std.action();
 
-        System.out.println(emp.get);
     }
 }
